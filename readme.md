@@ -4,6 +4,9 @@ Converts videos into the Snapchat Spectacle style. **[Example output](https://st
 ### Usage
     yarn
     yarn start path/to/video.mp4
+    # or with npm
+    npm install
+    npm start path/to/video.mp4
 
 ### Todo
 - [x] Fix aspect ratio/cropping.
