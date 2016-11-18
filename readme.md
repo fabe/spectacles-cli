@@ -6,5 +6,6 @@ Converts a video into the Snapchat Spectacle format.
     yarn start video.mp4
 
 ### Todo
-- [ ] fix aspect ratio/cropping
+- [x] fix aspect ratio/cropping
+- [ ] revisit cropping of vertical video
 - [ ] build client
