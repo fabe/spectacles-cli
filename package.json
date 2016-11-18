@@ -1,7 +1,10 @@
 {
-  "name": "ffmpeg-node",
+  "name": "node-spectacles",
   "version": "1.0.0",
+  "description": "Converts videos into the Snapchat Spectacle style.",
   "main": "index.js",
+  "author": "Fabian Schultz",
+  "repository": "https://github.com/fabe/node-spectacles",
   "license": "MIT",
   "dependencies": {
     "ffmpeg-node": "^0.0.2",

@@ -1,11 +1,11 @@
 # node-spectacles
-Converts a video into the Snapchat Spectacle format.
+Converts videos into the Snapchat Spectacle style. **[Example output](https://streamable.com/tijs)**.
 
 ### Usage
     yarn
-    yarn start video.mp4
+    yarn start path/to/video.mp4
 
 ### Todo
-- [x] fix aspect ratio/cropping
-- [ ] revisit cropping of vertical video
-- [ ] build client
+- [x] Fix aspect ratio/cropping.
+- [ ] Better cropping of vertical video. 
+- [ ] Build client.
