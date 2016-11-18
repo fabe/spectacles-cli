@@ -6,6 +6,9 @@
   "author": "Fabian Schultz",
   "repository": "https://github.com/fabe/node-spectacles",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "ffmpeg-node": "^0.0.2",
     "fluent-ffmpeg": "^2.1.0"
