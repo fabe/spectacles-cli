@@ -1,26 +1,43 @@
 #! /usr/bin/env node
 
-var ffmpeg = require('fluent-ffmpeg');
+const ffmpeg = require('fluent-ffmpeg');
 
-if (!process.argv[2]) {
-  console.log('Please specify a video source.');
-  return false;
+const infile = process.argv[2];
+const output = process.argv[3];
+const overlay = `${__dirname}/overlay.png`;
+const usage = `
+  Usage
+    $ spectacles path/to/source.mp4 path/to/output.mp4
+`;
+
+if (!infile) {
+  console.log(usage);
+  process.exit();
+} else if (!output) {
+  console.log('Please specify an output file.');
+  process.exit();
 }
 
-var infile = process.argv[2];
-var output = process.argv[3];
-var overlay = `${__dirname}/overlay.png`;
-
-ffmpeg(infile).input(overlay).outputOptions(['-map 0:a']).applyAutoPadding(true).complexFilter(['scale=-2:720[rescaled]', {
-  filter: 'overlay',
-  options: {
-    x: '(main_w-overlay_w)/2',
-    y: '(main_h-overlay_h)/2'
-  },
-  inputs: ['rescaled'],
-  outputs: 'output'
-}], 'output').output(output).on('error', function(error) {
-  console.log('Error: ' + error.message);
-}).on('end', function() {
-  console.log('Success!');
-}).run();
+ffmpeg(infile)
+  .input(overlay)
+  .outputOptions(['-map 0:a'])
+  .applyAutoPadding(true)
+  .complexFilter(
+    [
+      'scale=-2:720[rescaled]',
+      {
+        filter: 'overlay',
+        options: {
+          x: '(main_w-overlay_w)/2',
+          y: '(main_h-overlay_h)/2',
+        },
+        inputs: ['rescaled'],
+        outputs: 'output',
+      },
+    ],
+    'output'
+  )
+  .output(output)
+  .on('error', error => console.log('Error: ' + error.message))
+  .on('end', () => console.log('Success!'))
+  .run();
