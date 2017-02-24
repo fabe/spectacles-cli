@@ -1,6 +1,6 @@
 {
   "name": "spectacles-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Converts videos into the Snapchat Spectacles style.",
   "main": "index.js",
   "bin": {

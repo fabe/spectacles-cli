@@ -26,12 +26,18 @@ ffmpeg(infile)
     [
       'scale=-2:720[rescaled]',
       {
+        filter: 'crop',
+        options: 'ih:ih:iw/4:0',
+        inputs: 'rescaled',
+        outputs: 'crop'
+      },
+      {
         filter: 'overlay',
         options: {
           x: '(main_w-overlay_w)/2',
           y: '(main_h-overlay_h)/2',
         },
-        inputs: ['rescaled'],
+        inputs: 'crop',
         outputs: 'output',
       },
     ],
