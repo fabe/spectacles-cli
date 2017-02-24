@@ -10,7 +10,10 @@ You can install `spectacles-cli` globally through npm.
 Before using, you'll need to [install `ffmpeg`](https://ffmpeg.org/download.html) on your system. Either use the static builds on their website, or if you use homebrew, do `brew install ffmpeg`.
 
 ### Usage
-    spectacles path/to/source.mp4 path/to/output.mp4
+    $ spectacles
+
+      Usage
+        $ spectacles path/to/source.mp4 path/to/output.mp4
 
 ****
 
