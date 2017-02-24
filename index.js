@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var ffmpeg = require('fluent-ffmpeg');
 
 if (!process.argv[2]) {
@@ -6,8 +8,8 @@ if (!process.argv[2]) {
 }
 
 var infile = process.argv[2];
-var output = './processed.mp4';
-var overlay = './overlay.png';
+var output = process.argv[3];
+var overlay = `${__dirname}/overlay.png`;
 
 ffmpeg(infile).input(overlay).outputOptions(['-map 0:a']).applyAutoPadding(true).complexFilter(['scale=-2:720[rescaled]', {
   filter: 'overlay',
