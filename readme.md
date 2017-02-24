@@ -1,4 +1,4 @@
-# spectacles-cli
+# spectacles-cli [![Build Status](https://travis-ci.org/fabe/spectacles-cli.svg?branch=master)](https://travis-ci.org/fabe/spectacles-cli)
 Converts videos into the Snapchat Spectacles style. **[Example output](https://streamable.com/ga7w0)**.
 
 ### Installation
