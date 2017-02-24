@@ -1,4 +1,4 @@
-# node-spectacles
+# spectacles-cli
 Converts videos into the Snapchat Spectacles style. **[Example output](https://streamable.com/ga7w0)**.
 
 ### Installation
