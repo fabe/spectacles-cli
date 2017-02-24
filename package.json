@@ -1,5 +1,5 @@
 {
-  "name": "node-spectacles",
+  "name": "spectacles-cli",
   "version": "1.0.0",
   "description": "Converts videos into the Snapchat Spectacles style.",
   "main": "index.js",
@@ -19,7 +19,7 @@
   "author": {
     "name": "Fabian Schultz",
     "email": "desk@fabianschultz.com",
-    "url": "http://substack.net"
+    "url": "http://fabianschultz.com"
   },
   "license": "MIT",
   "scripts": {
