@@ -9,6 +9,8 @@
   <a href="https://travis-ci.org/fabe/spectacles-cli"><img src="https://travis-ci.org/fabe/spectacles-cli.svg?branch=master"></a>
 </p>
 
+****
+
 ## Installation
 You can install `spectacles-cli` globally through npm.
 
