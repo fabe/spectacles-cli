@@ -2,9 +2,9 @@
 Converts videos into the Snapchat Spectacles style. **[Example output](https://streamable.com/ga7w0)**.
 
 ### Installation
-You can install `node-spectacles` globally through npm.
+You can install `spectacles-cli` globally through npm.
 
-    npm install -g spectacles
+    npm install -g spectacles-cli
 
 ### Prerequisites
 Before using, you'll need to [install `ffmpeg`](https://ffmpeg.org/download.html) on your system. Either use the static builds on their website, or if you use homebrew, do `brew install ffmpeg`.
